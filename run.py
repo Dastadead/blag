@@ -5,11 +5,11 @@ from flask import Flask
 app = Flask(__name__)
 
 #Crear rutas con sus correspondientes funciones
-@app.route('/')
+@app.route('/', methods=['GET']) #Indicamos metodo GET
 def holamundo():
     return 'Hola Mundo!'
 
-@app.route('/mis-proyectos')
+@app.route('/mis-proyectos', methods=['GET'])
 def mostrarproyectos():
     return 'Aquí se mostrarán mis proyectos'
 
